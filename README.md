@@ -14,7 +14,7 @@ You can use **Composer** or simply **Download the Release**
 composer require adultvideosapi/adultvideosapi
 ```
 
-This library relies on `php-curl-class/php-curl-class`.
+This library relies on `php-curl-class/php-curl-class`
 
 ## Usage
 
@@ -43,10 +43,11 @@ To retrieve data from API you need to pass the model to `$adultVideosApi->get()`
 $adultVideosApi = new \AdultVideosApi\AdultVideosApi('72G0hC2jWBP1uHXS747A4CCENOvMuoCP');
 
 $getAllModel = \AdultVideosApi\Model\Request\Video\GetAllRequestModel();
+
 $responseData = $adultVideosApi->get($getAllModel);
 ```
 
-Response from `get()` method is the same as response in <a href="https://adultvideosapi.com/doc">API Docs.</a>
+Response from `get()` method is the same as response specified in <a href="https://adultvideosapi.com/doc">API Docs.</a>
 
 ```
 stdClass Object
@@ -62,7 +63,7 @@ stdClass Object
     [data] => Array
         (
             ...
-		)
+        )
 )
 ```
 
@@ -77,28 +78,28 @@ $getOnlyBestModel = \AdultVideosApi\Model\Request\Video\GetRecommendedRequestMod
 $responseData = $adultVideosApi->get($getAllModel, $getOnlyBestModel);
 ```
 
-Response from `get()` method used with multiple models will be array containing responses with same order. Calls are made in parallel mode and waits till the last one finish.
+Response from `get()` method used with multiple models will be array containing responses with same order. Calls are made in parallel and waits till the last one finish.
 
 ```
 Array
 (
-	[0] => stdClass Object
+    [0] => stdClass Object
         (
-			[status] => 1
-			[pagination] => stdClass Object
-				(
-					[page] => 1
-					[per_page] => 20
-					[total] => 5000
-				)
+            [status] => 1
+            [pagination] => stdClass Object
+                (
+                    [page] => 1
+                    [per_page] => 20
+                    [total] => 5000
+                )
 
-			[data] => Array
-				(
-					...
-				)
-		)
-		
-	[1]	=> ...
+            [data] => Array
+                (
+                    ...
+                )
+        )
+        
+    [1]    => ...
 )
 ```
 
