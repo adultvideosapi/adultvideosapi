@@ -1,0 +1,24 @@
+{
+    "name": "adultvideosapi/adultvideosapi",
+    "description": "Adult Videos API",
+    "homepage": "https://adultvideosapi.com",
+    "keywords": ["adult", "videos", "porn", "adult-videos", "porn-videos", "api"],
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "AdultVideosApi\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Denis Ulmann",
+            "email": "denis@ulmann.it"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.4",
+            "php-curl-class/php-curl-class": "~9.6"
+    }
+}
