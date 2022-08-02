@@ -8,7 +8,7 @@ use Curl\MultiCurl;
 
 class AdultVideosApi
 {
-    const BASE_URI = 'http://adultvideosapi.local/api';
+    const BASE_URI = 'https://adultvideosapi.com/api';
     private string $apiKey;
 
     public function __construct($apiKey)
