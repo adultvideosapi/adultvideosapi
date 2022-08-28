@@ -6,6 +6,7 @@ class GetRecommendedRequestModel {
 
     public string $video_ids;
     public bool $only_gay;
+    public bool $only_trans;
     public int $page;
     public int $per_page;
 }
